@@ -1,0 +1,45 @@
+{
+  "root": "packages/reducer",
+  "sourceRoot": "packages/reducer/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "packages/reducer/dist",
+        "main": "packages/reducer/src/index.ts",
+        "tsConfig": "packages/reducer/tsconfig.lib.json",
+        "assets": ["packages/reducer/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/reducer/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/reducer"],
+      "options": {
+        "jestConfig": "packages/reducer/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "publish": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "rm -rf packages/reducer/dist",
+          "npx ts-node tools/scripts/bump-version.ts reducer {args.version}",
+          "nx build reducer",
+          "npx ts-node tools/scripts/publish.ts reducer"
+        ],
+        "parallel": false
+      }
+    }
+  },
+  "tags": ["package-type:implementation"]
+}

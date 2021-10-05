@@ -28,22 +28,14 @@
         "passWithNoTests": true
       }
     },
-    "publish-patch": {
+    "publish": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "command": "npx ts-node tools/scripts/publish.ts view-model patch"
-      }
-    },
-    "publish-minor": {
-      "executor": "@nrwl/workspace:run-commands",
-      "options": {
-        "command": "npx ts-node tools/scripts/publish.ts view-model minor"
-      }
-    },
-    "publish-major": {
-      "executor": "@nrwl/workspace:run-commands",
-      "options": {
-        "command": "npx ts-node tools/scripts/publish.ts view-model major"
+        "commands": [
+          "npx ts-node tools/scripts/bump-version.ts view-model {args.version}",
+          "npx ts-node tools/scripts/publish.ts view-model"
+        ],
+        "parallel": false
       }
     }
   },

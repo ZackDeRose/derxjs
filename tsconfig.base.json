@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@derxjs/reducer": ["packages/reducer/src/index.ts"],
       "@derxjs/view-model": ["packages/view-model/src/index.ts"]
     }
   },

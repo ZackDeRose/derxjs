@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "reducer": "packages/reducer",
     "view-model": "packages/view-model"
   },
   "cli": {

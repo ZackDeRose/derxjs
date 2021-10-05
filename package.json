@@ -1,8 +1,10 @@
 {
   "name": "derxjs",
-  "version": "0.0.0",
+  "version": "1.0.20",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "publish-packages": "npx ts-node tools/scripts/publish-all.ts"
+  },
   "private": true,
   "dependencies": {
     "tslib": "^2.0.0",
