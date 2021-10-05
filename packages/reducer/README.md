@@ -1,3 +1,6 @@
+**Note: This API is Subject to Change!**
+_(@derxjs/view-model is stable however)_
+
 # @derxjs/reducer
 
 Because your state management code should be domain-agnostic.
