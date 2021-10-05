@@ -16,8 +16,6 @@
     "@angular/platform-browser": "^12.2.0",
     "@angular/platform-browser-dynamic": "^12.2.0",
     "@angular/router": "^12.2.0",
-    "@derxjs/reducer": "^1.0.24",
-    "@derxjs/view-model": "^1.0.24",
     "core-js": "^3.6.5",
     "react": "17.0.2",
     "react-dom": "17.0.2",
