@@ -3,7 +3,7 @@
 Because your state management code should be domain-agnostic.
 
 <p align="center">
-    <img src="../../derxjs-logo.jpg" height="400px"/>
+    <img src="https://github.com/ZackDeRose/derxjs/blob/main/derxjs-logo.jpg" height="400px"/>
 </p>
 
 ## Installation
@@ -33,7 +33,7 @@ Future packages on the roadmap will provide utilities for implementing this patt
 We solved this a long time ago. Programming to interfaces allows us to put a joint in our wrokflows that allows for parallel work to be completed by multiple developers, and lets your team play to their strengths.
 
 <p align="center">
-    <img src="../../separation-of-tasks.png" />
+    <img src="https://github.com/ZackDeRose/derxjs/blob/main/separation-of-tasks.png" />
 </p>
 
 This allows for easy transitions into other implementations, frameworks, as well as implementing the facade, adapter, and proxy patterns from the Gang of Four.
@@ -59,7 +59,7 @@ The `DeRxJSViewModel` type is the `E = mc^2` of state management.
 Deceptively simple, but elegant enough to encompass any && all of your state management requirements.
 
 <p align="center">
-    <img src="../../the-derxjs-view-model-pattern.png" />
+    <img src="https://github.com/ZackDeRose/derxjs/blob/main/the-derxjs-view-model-pattern.png" />
 </p>
 
 ### TDD made awesome with timeline testing
