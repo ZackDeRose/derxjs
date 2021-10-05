@@ -3,7 +3,7 @@
 Because your state management code should be domain-agnostic.
 
 <p align="center">
-    <img src="../../derxjs-logo.jpg" height="400px"/>
+    <img src="../../images/derxjs-logo.jpg" height="400px"/>
 </p>
 
 ## Installation
