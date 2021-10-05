@@ -1,6 +1,6 @@
 {
   "name": "derxjs",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "license": "MIT",
   "scripts": {
     "publish-packages": "npx ts-node tools/scripts/publish-all.ts",
