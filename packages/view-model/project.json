@@ -1,0 +1,51 @@
+{
+  "root": "packages/view-model",
+  "sourceRoot": "packages/view-model/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/view-model",
+        "main": "packages/view-model/src/index.ts",
+        "tsConfig": "packages/view-model/tsconfig.lib.json",
+        "assets": ["packages/view-model/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/view-model/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/view-model"],
+      "options": {
+        "jestConfig": "packages/view-model/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "publish-patch": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npx ts-node tools/scripts/publish.ts view-model patch"
+      }
+    },
+    "publish-minor": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npx ts-node tools/scripts/publish.ts view-model minor"
+      }
+    },
+    "publish-major": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npx ts-node tools/scripts/publish.ts view-model major"
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,6 +1,8 @@
 {
   "version": 2,
-  "projects": {},
+  "projects": {
+    "view-model": "packages/view-model"
+  },
   "cli": {
     "defaultCollection": "@nrwl/workspace"
   }

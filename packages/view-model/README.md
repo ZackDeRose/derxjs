@@ -6,7 +6,7 @@ Because your state management code should be domain-agnostic.
     <img src="./derxjs-logo.jpg" height="400px"/>
 </p>
 
-## Packages
+## Installation
 
 ```bash
 npm i @derxjs/view-model
