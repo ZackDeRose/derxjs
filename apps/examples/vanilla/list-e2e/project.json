@@ -1,0 +1,28 @@
+{
+  "root": "apps/examples/vanilla/list-e2e",
+  "sourceRoot": "apps/examples/vanilla/list-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/examples/vanilla/list-e2e/cypress.json",
+        "devServerTarget": "examples-vanilla-list:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "examples-vanilla-list:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/examples/vanilla/list-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["examples-vanilla-list"]
+}

@@ -1,0 +1,75 @@
+{
+  "projectType": "application",
+  "root": "apps/examples/vanilla/list",
+  "sourceRoot": "apps/examples/vanilla/list/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/examples/vanilla/list",
+        "index": "apps/examples/vanilla/list/src/index.html",
+        "main": "apps/examples/vanilla/list/src/main.ts",
+        "polyfills": "apps/examples/vanilla/list/src/polyfills.ts",
+        "tsConfig": "apps/examples/vanilla/list/tsconfig.app.json",
+        "assets": [
+          "apps/examples/vanilla/list/src/favicon.ico",
+          "apps/examples/vanilla/list/src/assets"
+        ],
+        "styles": ["apps/examples/vanilla/list/src/styles.css"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/examples/vanilla/list/src/environments/environment.ts",
+              "with": "apps/examples/vanilla/list/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "extractCss": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "2mb",
+              "maximumError": "5mb"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "examples-vanilla-list:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "examples-vanilla-list:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/examples/vanilla/list/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/examples/vanilla/list"],
+      "options": {
+        "jestConfig": "apps/examples/vanilla/list/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
