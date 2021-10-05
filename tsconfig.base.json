@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@derxjs/examples/list-view-model-implementation": [
+        "libs/examples/list-view-model-implementation/src/index.ts"
+      ],
       "@derxjs/reducer": ["packages/reducer/src/index.ts"],
       "@derxjs/view-model": ["packages/view-model/src/index.ts"]
     }

@@ -1,0 +1,25 @@
+{
+  "root": "libs/examples/list-view-model-implementation",
+  "sourceRoot": "libs/examples/list-view-model-implementation/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/examples/list-view-model-implementation/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/examples/list-view-model-implementation"],
+      "options": {
+        "jestConfig": "libs/examples/list-view-model-implementation/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["type:example"]
+}

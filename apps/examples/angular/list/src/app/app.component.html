@@ -1,0 +1,14 @@
+<ng-container *ngIf="viewModel$ | async as viewModel">
+  <h1>@derxj/view-model Angular Usage Example</h1>
+
+  <form>
+    <input type="text" [formControl]="textInputFormControl" />
+    <button (click)="push()">Push</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let item of viewModel">{{ item }}</li>
+  </ul>
+
+  <button (click)="pop()">Pop</button>
+</ng-container>
