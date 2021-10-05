@@ -82,7 +82,7 @@ function isReleaseType(x: any): x is ReleaseType {
 }
 
 function pushToGithub() {
-  execSync('git push -f');
+  execSync('git push');
 }
 
 function publishEachPackage(versionNumber: string) {
