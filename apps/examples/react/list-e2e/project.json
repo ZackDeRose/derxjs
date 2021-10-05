@@ -1,0 +1,28 @@
+{
+  "root": "apps/examples/react/list-e2e",
+  "sourceRoot": "apps/examples/react/list-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/examples/react/list-e2e/cypress.json",
+        "devServerTarget": "examples-react-list:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "examples-react-list:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/examples/react/list-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["examples-react-list"]
+}

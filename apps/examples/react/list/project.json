@@ -1,0 +1,78 @@
+{
+  "root": "apps/examples/react/list",
+  "sourceRoot": "apps/examples/react/list/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/examples/react/list",
+        "index": "apps/examples/react/list/src/index.html",
+        "main": "apps/examples/react/list/src/main.tsx",
+        "polyfills": "apps/examples/react/list/src/polyfills.ts",
+        "tsConfig": "apps/examples/react/list/tsconfig.app.json",
+        "assets": [
+          "apps/examples/react/list/src/favicon.ico",
+          "apps/examples/react/list/src/assets"
+        ],
+        "styles": ["apps/examples/react/list/src/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/examples/react/list/src/environments/environment.ts",
+              "with": "apps/examples/react/list/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "extractCss": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "examples-react-list:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "examples-react-list:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/examples/react/list/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/examples/react/list"],
+      "options": {
+        "jestConfig": "apps/examples/react/list/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
