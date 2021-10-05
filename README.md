@@ -1,4 +1,4 @@
-# @derxjs/view-model
+# @derxjs
 
 Because your state management code should be domain-agnostic.
 
@@ -8,9 +8,10 @@ Because your state management code should be domain-agnostic.
 
 ## Packages
 
-```bash
-npm i @derxjs/view-model
-```
+| Package            | Installation                |
+| ------------------ | --------------------------- |
+| @derxjs/view-model | `npm i @derxjs/view-model ` |
+| @derxjs/reducer    | `npm i @derxjs/reducer `    |
 
 ## Usage
 
