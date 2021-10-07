@@ -72,7 +72,13 @@ function ListView({
 }
 
 export const App = () => {
-  return <List initialValue={[]} />;
+  return (
+    <>
+      <List initialValue={[]} />
+      <List initialValue={[]} />
+      <List initialValue={[]} />
+    </>
+  );
 };
 
 export default App;

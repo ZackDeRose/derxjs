@@ -3,9 +3,10 @@ import {
   customListImpl$ as listViewModel$,
   ListViewModelInputs,
 } from '@derxjs/examples/list-view-model-implementation';
+import { useRef } from 'react';
 import { DeRxJSViewModelComponent } from './derxjs-view-model-component';
 
-export function List({ initialValue }: { initialValue: string[] }) {
+export const List = ({ initialValue }: { initialValue: string[] }) => {
   return DeRxJSViewModelComponent<
     ListViewModelInputs,
     ListViewModel,
@@ -18,9 +19,9 @@ export function List({ initialValue }: { initialValue: string[] }) {
       pop: 'pop$',
       push: 'push$',
     },
-    inputs: {},
+    inputs: { initialValue },
   });
-}
+};
 
 export interface ListProps<T> {
   initialState: T[];
@@ -38,10 +39,10 @@ function ListView({
     pop: () => void;
   };
 }) {
-  console.log(triggers);
+  const textInputElement = useRef<HTMLInputElement>(null);
   const handlePush = (e: any) => {
     e.preventDefault();
-    const textInput = document.getElementById('textInput')! as HTMLInputElement;
+    const textInput = textInputElement.current!;
     const formValue = textInput.value;
     triggers.push(formValue);
     textInput.value = '';
@@ -50,7 +51,7 @@ function ListView({
     <>
       <h1>@derxj/view-model React Usage Example</h1>
       <form>
-        <input type="text" id="textInput" />
+        <input type="text" ref={textInputElement} />
         <button onClick={handlePush}>Push</button>
       </form>
       <ul>
