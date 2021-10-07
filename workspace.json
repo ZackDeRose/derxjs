@@ -1,7 +1,7 @@
 {
   "version": 2,
   "projects": {
-    "packages-react": "packages/react",
+    "react": "packages/react",
     "examples-angular-list": "apps/examples/angular/list",
     "examples-angular-list-e2e": "apps/examples/angular/list-e2e",
     "examples-list-view-model-implementation": "libs/examples/list-view-model-implementation",
