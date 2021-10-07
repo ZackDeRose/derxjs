@@ -6,6 +6,7 @@ import {
 import { DeRxJSViewModel } from 'packages/view-model/src/lib/view-model';
 import { useEffect, useState } from 'react';
 import { Observable, Observer } from 'rxjs';
+import { List, ListProps } from './List';
 
 let pushObserver: Observer<string>;
 let popObserver: Observer<void>;
@@ -71,7 +72,7 @@ function ListView({
 }
 
 export const App = () => {
-  return ViewModelComponent(customListImpl$, ListView);
+  return <List initialValue={[]} />;
 };
 
 export default App;
