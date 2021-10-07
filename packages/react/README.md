@@ -17,7 +17,7 @@ npm i @derxjs/react
 
 ## Usage
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-j89fzs?file=derxjs-component.tsx)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-j89fzs?file=List.tsx)
 
 **App.tsx**
 

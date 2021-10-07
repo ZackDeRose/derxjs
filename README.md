@@ -16,13 +16,20 @@ Because your state management code should be domain-agnostic.
 
 ## Usage
 
-| Example               | Vanilla                                                                                                                                          | React                                                                                                                                             | Angular                                                                                                                                                            |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Simple List Component | ![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/typescript-ttcedi?file=index.ts) | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-j89fzs?file=List.tsx)   | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/angular-ivy-d8prtn?file=src/app/app.component.ts) |
-| @derxjs/reducer       | `npm i @derxjs/reducer `                                                                                                                         |
-| @derxjs/react         | `npm i @derxjs/react `                                                                                                                           | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/typescript-ttcedi?file=index.ts) |
-
-See it in action on [StackBlitz](https://stackblitz.com/edit/typescript-ttcedi?embed=1&file=index.ts)
+<table>
+  <tr>
+    <th>Example</th>
+    <th>Vanilla</th>
+    <th>React</th>
+    <th>Angular</th>
+  </tr>
+  <tr>
+    <td>Simple List Component</td>
+    <td>[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/typescript-ttcedi?file=index.ts)</td>
+    <td>[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-j89fzs?file=List.tsx)</td>
+    <td>[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/angular-ivy-d8prtn?file=src/app/app.component.ts)</td>
+  </tr>
+</table>
 
 ## Why @derxjs
 
