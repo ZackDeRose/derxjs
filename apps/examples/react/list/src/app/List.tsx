@@ -4,23 +4,21 @@ import {
   ListViewModelInputs,
 } from '@derxjs/examples/list-view-model-implementation';
 import { useRef } from 'react';
-import { DeRxJSViewModelComponent } from './derxjs-view-model-component';
+import { DeRxJSComponent } from '@derxjs/react';
 
 export const List = ({ initialValue }: { initialValue: string[] }) => {
-  return DeRxJSViewModelComponent<
-    ListViewModelInputs,
-    ListViewModel,
-    ListProps<string>
-  >({
-    component: ListView as any,
-    viewModel$: listViewModel$,
-    initialValue,
-    triggerMap: {
-      pop: 'pop$',
-      push: 'push$',
-    },
-    inputs: { initialValue },
-  });
+  return DeRxJSComponent<ListViewModelInputs, ListViewModel, ListProps<string>>(
+    {
+      component: ListView as any,
+      viewModel$: listViewModel$,
+      initialValue,
+      triggerMap: {
+        pop: 'pop$',
+        push: 'push$',
+      },
+      inputs: { initialValue },
+    }
+  );
 };
 
 export interface ListProps<T> {
@@ -49,7 +47,6 @@ function ListView({
   };
   return (
     <>
-      <h1>@derxj/view-model React Usage Example</h1>
       <form>
         <input type="text" ref={textInputElement} />
         <button onClick={handlePush}>Push</button>

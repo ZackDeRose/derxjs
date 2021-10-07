@@ -1,27 +1,14 @@
-import { DeRxJSViewModel } from 'packages/view-model/src/lib/view-model';
 import { useEffect, useRef, useState } from 'react';
 import { Observable, Observer } from 'rxjs';
+import { DeRxJSViewModel } from '../../../view-model/src';
 
-let pushObserver: Observer<string>;
-let popObserver: Observer<void>;
-const push$ = new Observable<string>((observer) => (pushObserver = observer));
-const pop$ = new Observable<void>((observer) => (popObserver = observer));
-
-/**
- * Some version of this higher-order componentexposed by our
- * ngrx/react package in an upcoming release!
- */
-export const DeRxJSViewModelComponent = <InputType, ViewModelType, PropType>({
+export const DeRxJSComponent = <InputType, ViewModelType, PropType>({
   viewModel$,
   component,
   triggerMap,
   initialValue,
   inputs,
 }: DeRxJSViewModelComponentProps<InputType, ViewModelType, PropType>) => {
-  //   const triggers = Object.keys(triggerMap).reduce((acc, key) => {
-  //     acc[key] = (x: any) => observers[key].next(x);
-  //     return acc;
-  //   }, {} as any);
   const [state, setState] = useState(initialValue);
 
   const triggers = useRef(

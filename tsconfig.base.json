@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@derxjs/react": ["packages/react/src/index.ts"],
       "@derxjs/examples/list-view-model-implementation": [
         "libs/examples/list-view-model-implementation/src/index.ts"
       ],

@@ -1,0 +1,44 @@
+{
+  "root": "packages/react",
+  "sourceRoot": "packages/react/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/react",
+        "main": "packages/react/src/index.ts",
+        "tsConfig": "packages/react/tsconfig.lib.json",
+        "assets": ["packages/react/*.md"]
+      },
+      "outputPath": "packages/react/dist"
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": { "lintFilePatterns": ["packages/react/**/*.ts"] }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/react"],
+      "options": {
+        "jestConfig": "packages/react/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "publish": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          "rm -rf packages/react/dist",
+          "npx ts-node tools/scripts/bump-version.ts react {args.version}",
+          "nx build react",
+          "npx ts-node tools/scripts/publish.ts react"
+        ],
+        "parallel": false
+      }
+    }
+  },
+  "tags": []
+}

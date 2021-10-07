@@ -3,7 +3,7 @@ import { readFileSync } from 'fs';
 import prompt from 'prompt';
 
 const releaseTypes = ['major', 'minor', 'patch'] as const;
-const packages = ['view-model', 'reducer'] as const;
+const packages = ['react', 'view-model', 'reducer'] as const;
 
 async function run() {
   if (!areWeOnMainBranch()) {
