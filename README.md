@@ -12,47 +12,15 @@ Because your state management code should be domain-agnostic.
 | ------------------ | --------------------------- |
 | @derxjs/view-model | `npm i @derxjs/view-model ` |
 | @derxjs/reducer    | `npm i @derxjs/reducer `    |
+| @derxjs/react      | `npm i @derxjs/react `      |
 
 ## Usage
 
-```ts
-import { DeRxJSViewModel } from '@derxjs/view-model';
-import { merge, Observable } from 'rxjs';
-import { map, scan, startWith } from 'rxjs/operators';
-
-export const listViewModel$: DeRxJSViewModel<
-  ListViewModelInputs,
-  ListViewModel
-> = ({ push$, pop$, initialValue }) => {
-  return merge(
-    push$.pipe(map((item) => ({ type: 'push', item }))),
-    pop$.pipe(map(() => ({ type: 'pop' })))
-  ).pipe(scan(reducer, initialValue), startWith(initialValue));
-};
-
-interface ListViewModelInputs {
-  push$: Observable<string>;
-  pop$: Observable<void>;
-  initialValue: string[];
-}
-
-type ListViewModel = string[];
-
-type Action = { type: 'push'; item: string } | { type: 'pop' };
-
-function reducer(state: ListViewModel, action: Action): ListViewModel {
-  switch (action.type) {
-    case 'push': {
-      return [...state, action.item];
-    }
-    case 'pop': {
-      const newState = [...state];
-      newState.pop();
-      return newState;
-    }
-  }
-}
-```
+| Example               | Vanilla                                                                                                                                          | React                                                                                                                                             | Angular                                                                                                                                                            |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Simple List Component | ![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/typescript-ttcedi?file=index.ts) | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-j89fzs?file=List.tsx)   | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/angular-ivy-d8prtn?file=src/app/app.component.ts) |
+| @derxjs/reducer       | `npm i @derxjs/reducer `                                                                                                                         |
+| @derxjs/react         | `npm i @derxjs/react `                                                                                                                           | [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/typescript-ttcedi?file=index.ts) |
 
 See it in action on [StackBlitz](https://stackblitz.com/edit/typescript-ttcedi?embed=1&file=index.ts)
 

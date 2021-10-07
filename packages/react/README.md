@@ -23,7 +23,6 @@ npm i @derxjs/react
 
 ```tsx
 import { customListImpl$ } from '@derxjs/examples/list-view-model-implementation';
-import { CustomListImpl, ListView } from './CustomListImpl';
 import { List } from './List';
 
 export const App = () => {
@@ -114,7 +113,6 @@ function ListView({
 }
 ```
 
-- See it in action on StackBlitz
 - More docs to come for 2.0.0 release
 
 ## Why @derxjs
@@ -174,9 +172,9 @@ This tool will generate `.spec.ts` files that you can paste directly into your r
 - @derxjs/view-model package ✅
 - Article on TDD and implementing DeRxJS View Models (10/8/2021)
 - Article on using DeRxJS View Models in different Frameworks (10/15/2021)
-- @derxjs/reducer package (TBD; beta available now [you're looking at it!])
+- @derxjs/reducer package (TBD; beta available now)
 - Timeline Test Code Generation Tool (TBD)
 - @derxjs/selector package (TBD)
-- @derxjs/react package (TBD)
+- @derxjs/react package (TBD; beta available now)
 - Ai-Driven DeRxJS Code Generation (TBD)
   `

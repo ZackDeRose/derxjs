@@ -10,8 +10,6 @@ async function run() {
 run();
 
 function publishToNpm(packageName: string) {
-  const cwd = existsSync(join('packages', packageName, 'dist'))
-    ? join('packages', packageName, 'dist')
-    : join('packages', packageName);
+  const cwd = join('dist', 'packages', packageName);
   execSync(`npm publish --access public`, { cwd });
 }

@@ -7,7 +7,7 @@
       "executor": "@nrwl/workspace:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "packages/reducer/dist",
+        "outputPath": "dist/packages/reducer",
         "main": "packages/reducer/src/index.ts",
         "tsConfig": "packages/reducer/tsconfig.lib.json",
         "assets": ["packages/reducer/*.md"]
