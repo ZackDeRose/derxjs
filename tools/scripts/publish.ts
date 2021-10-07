@@ -13,5 +13,5 @@ function publishToNpm(packageName: string) {
   const cwd = existsSync(join('packages', packageName, 'dist'))
     ? join('packages', packageName, 'dist')
     : join('packages', packageName);
-  execSync(`npm publish`, { cwd });
+  execSync(`npm publish --access public`, { cwd });
 }
