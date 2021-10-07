@@ -37,8 +37,12 @@ function getCurrentVersion(releaseType: ReleaseType): string {
   const [major, minor, patch] = packageVersion.split('.');
   return [
     releaseType === 'major' ? `${+major + 1}` : major,
-    releaseType === 'minor' ? `${+minor + 1}` : minor,
-    releaseType === 'patch' ? `${+patch + 1}` : patch,
+    releaseType === 'major'
+      ? 0
+      : releaseType === 'minor'
+      ? `${+minor + 1}`
+      : minor,
+    releaseType === 'patch' ? `${+patch + 1}` : 0,
   ].join('.');
 }
 
