@@ -26,13 +26,19 @@ Because your state management code should be domain-agnostic.
   <tr>
     <td>Simple List Component</td>
     <td>
-      <img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" href="https://stackblitz.com/edit/typescript-ttcedi?file=index.ts">
+      <a href="https://stackblitz.com/edit/typescript-ttcedi?file=index.ts">
+        <img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg">
+      </a>
     </td>
     <td>
-      <img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" href="https://stackblitz.com/edit/typescript-ttcedi?file=index.ts">
+      <a href="https://stackblitz.com/edit/typescript-ttcedi?file=index.ts">
+        <img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg">
+      </a>
     </td>
     <td>
-      <img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" href="https://stackblitz.com/edit/angular-ivy-d8prtn?file=src/app/app.component.ts">
+      <a href="https://stackblitz.com/edit/angular-ivy-d8prtn?file=src/app/app.component.ts">
+        <img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg">
+      </a>
     </td>  
   </tr>
 </table>
@@ -43,13 +49,13 @@ Because your state management code should be domain-agnostic.
 
 Your state management code should not depend on which framework or tools your project happens to be using at the time.
 
-`@derxjs/view-model` is all about first-principles thinking and problem-solving. The pattern enforced by this package requires you to break down the your system - regardless of scope - to some set of inputs, (preferably represented as RxJS Observables!), and expose a single Observable of your ViewModel as an output.
+`@derxjs/view-model` is all about first-principles thinking and problem-solving. The pattern enforced by this package requires you to break down your system - regardless of scope - to some set of inputs (preferably represented as RxJS Observables!) and expose a single Observable of your ViewModel as an output.
 
-Future packages on the roadmap will provide utilities for implementing this pattern (`@derxjs/reducer` 👀), as well as ultilities for plugging this pattern into popular front-end frameworks (`@derxjs/react` 👀).
+Future packages on the roadmap will provide utilities for implementing this pattern (`@derxjs/reducer` 👀), as well as utilities for plugging it into popular front-end frameworks (`@derxjs/react` 👀).
 
 ### Separation of concerns
 
-We solved this a long time ago. Programming to interfaces allows us to put a joint in our wrokflows that allows for parallel work to be completed by multiple developers, and lets your team play to their strengths.
+We solved this a long time ago. Programming to interfaces lets us put a joint in our workflow that allows for parallel work to be completed by multiple developers and lets your team play to their strengths.
 
 <p align="center">
     <img src="./separation-of-tasks.png" />
@@ -61,7 +67,7 @@ This allows for easy transitions into other implementations, frameworks, as well
 
 We're not here to take a shot at the king ([👑](https://ngrx.io/)👀) - we're just here to help out where we can!
 
-The `@derxjs/view-model` package is designed to work with with any other state management frameworks that can expose state or events as an Observable, making it a great compliment to any and all existing code in your codebase.
+The `@derxjs/view-model` package is designed to work with any other state management frameworks that can expose state or events as an Observable, making it a great compliment to any existing code in your codebase.
 
 ### Future-Proof Code
 
