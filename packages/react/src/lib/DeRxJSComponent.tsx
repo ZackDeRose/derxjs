@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Observable, Observer } from 'rxjs';
-import { DeRxJSViewModel } from '../../../view-model/src';
+import { DeRxJSViewModel } from '@derxjs/view-model';
 
 export const DeRxJSComponent = <InputType, ViewModelType, PropType>({
   viewModel$,
