@@ -27,18 +27,15 @@ Because your state management code should be domain-agnostic.
     <td>Simple List Component</td>
     <td>
       <img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" href="https://stackblitz.com/edit/typescript-ttcedi?file=index.ts">
-      [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/typescript-ttcedi?file=index.ts)
     </td>
     <td>
-      [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-j89fzs?file=List.tsx)
+      <img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" href="https://stackblitz.com/edit/typescript-ttcedi?file=index.ts">
     </td>
     <td>
-      [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/api-routes)
-    </td>
+      <img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" href="https://stackblitz.com/edit/angular-ivy-d8prtn?file=src/app/app.component.ts">
+    </td>  
   </tr>
 </table>
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/api-routes)
 
 ## Why @derxjs
 
