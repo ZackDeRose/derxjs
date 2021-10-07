@@ -1,6 +1,5 @@
 import { execSync } from 'child_process';
-import { join } from 'path';
-import { existsSync, readFileSync } from 'fs';
+import { readFileSync } from 'fs';
 import prompt from 'prompt';
 
 const releaseTypes = ['major', 'minor', 'patch'] as const;
