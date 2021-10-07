@@ -31,9 +31,9 @@
       "executor": "@nrwl/workspace:run-commands",
       "options": {
         "commands": [
-          "rm -rf packages/react/dist",
           "npx ts-node tools/scripts/bump-version.ts react {args.version}",
           "nx build react",
+          "npx ts-node tools/scripts/bump-dist-version.ts react {args.version}",
           "npx ts-node tools/scripts/publish.ts react"
         ],
         "parallel": false

@@ -33,6 +33,8 @@
       "options": {
         "commands": [
           "npx ts-node tools/scripts/bump-version.ts view-model {args.version}",
+          "nx build view-model",
+          "npx ts-node tools/scripts/bump-dist-version.ts view-model {args.version}",
           "npx ts-node tools/scripts/publish.ts view-model"
         ],
         "parallel": false

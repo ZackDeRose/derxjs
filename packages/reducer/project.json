@@ -32,9 +32,9 @@
       "executor": "@nrwl/workspace:run-commands",
       "options": {
         "commands": [
-          "rm -rf packages/reducer/dist",
           "npx ts-node tools/scripts/bump-version.ts reducer {args.version}",
           "nx build reducer",
+          "npx ts-node tools/scripts/bump-dist-version.ts reducer {args.version}",
           "npx ts-node tools/scripts/publish.ts reducer"
         ],
         "parallel": false
