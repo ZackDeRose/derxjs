@@ -1,6 +1,6 @@
 {
   "name": "@derxjs/react",
-  "version": "1.0.39",
+  "version": "1.0.40",
   "main": "dist/packages/reducer/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
