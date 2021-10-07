@@ -6,7 +6,7 @@ _(@derxjs/view-model is stable however)_
 Because your state management code should be domain-agnostic.
 
 <p align="center">
-    <img src="https://github.com/ZackDeRose/derxjs/blob/main/derxjs-react-logo.jpg" height="400px"/>
+    <img src="https://github.com/ZackDeRose/derxjs/blob/main/derxjs-react-logo.png" height="400px"/>
 </p>
 
 ## Installation
@@ -17,9 +17,9 @@ npm i @derxjs/react
 
 ## Usage
 
-**App.tsx**
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/react-ts-j89fzs?file=derxjs-component.tsx)
 
-See it in action on Stackblitz
+**App.tsx**
 
 ```tsx
 import { customListImpl$ } from '@derxjs/examples/list-view-model-implementation';
