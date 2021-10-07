@@ -55,7 +55,7 @@ async function addToPublishScriptList(tree: Tree, libName: string) {
   const code = tree.read(publishAllScriptPath).toString();
   const newCode = code.replace(
     'const packages = [',
-    `const pacakges = ['${libName}', `
+    `const packages = ['${libName}', `
   );
   tree.write(publishAllScriptPath, newCode);
 }
