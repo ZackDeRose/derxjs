@@ -1,0 +1,27 @@
+{
+  "root": "libs/examples/tic-tac-toe-view-model-implementation",
+  "sourceRoot": "libs/examples/tic-tac-toe-view-model-implementation/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/examples/tic-tac-toe-view-model-implementation/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/examples/tic-tac-toe-view-model-implementation"
+      ],
+      "options": {
+        "jestConfig": "libs/examples/tic-tac-toe-view-model-implementation/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

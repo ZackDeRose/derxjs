@@ -15,10 +15,13 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@derxjs/react": ["packages/react/src/index.ts"],
       "@derxjs/examples/list-view-model-implementation": [
         "libs/examples/list-view-model-implementation/src/index.ts"
       ],
+      "@derxjs/examples/tic-tac-toe-view-model-implementation": [
+        "libs/examples/tic-tac-toe-view-model-implementation/src/index.ts"
+      ],
+      "@derxjs/react": ["packages/react/src/index.ts"],
       "@derxjs/reducer": ["packages/reducer/src/index.ts"],
       "@derxjs/view-model": ["packages/view-model/src/index.ts"]
     }

@@ -1,14 +1,15 @@
 {
   "version": 2,
   "projects": {
-    "react": "packages/react",
     "examples-angular-list": "apps/examples/angular/list",
     "examples-angular-list-e2e": "apps/examples/angular/list-e2e",
     "examples-list-view-model-implementation": "libs/examples/list-view-model-implementation",
     "examples-react-list": "apps/examples/react/list",
     "examples-react-list-e2e": "apps/examples/react/list-e2e",
+    "examples-tic-tac-toe-view-model-implementation": "libs/examples/tic-tac-toe-view-model-implementation",
     "examples-vanilla-list": "apps/examples/vanilla/list",
     "examples-vanilla-list-e2e": "apps/examples/vanilla/list-e2e",
+    "react": "packages/react",
     "reducer": "packages/reducer",
     "view-model": "packages/view-model"
   },
