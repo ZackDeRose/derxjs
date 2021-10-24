@@ -14,18 +14,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'examples-angular-tic-tac-toe'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('examples-angular-tic-tac-toe');
-  });
-
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Welcome to examples-angular-tic-tac-toe!'
-    );
+    expect(compiled.querySelector('h1')?.textContent).toContain('Tic Tac Toe');
   });
 });
