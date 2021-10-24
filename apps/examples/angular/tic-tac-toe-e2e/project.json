@@ -1,0 +1,30 @@
+{
+  "root": "apps/examples/angular/tic-tac-toe-e2e",
+  "sourceRoot": "apps/examples/angular/tic-tac-toe-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/examples/angular/tic-tac-toe-e2e/cypress.json",
+        "devServerTarget": "examples-angular-tic-tac-toe:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "examples-angular-tic-tac-toe:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/examples/angular/tic-tac-toe-e2e/**/*.{js,ts}"
+        ]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["examples-angular-tic-tac-toe"]
+}

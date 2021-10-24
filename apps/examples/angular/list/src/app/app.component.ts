@@ -14,8 +14,8 @@ import { Observable, Observer } from 'rxjs';
 })
 export class AppComponent {
   textInputFormControl = new FormControl();
-  private _pushObserver?: Observer<string>;
-  private _popObserver?: Observer<void>;
+  private _pushObserver!: Observer<string>;
+  private _popObserver!: Observer<void>;
   viewModel$: Observable<ListViewModel>;
 
   constructor() {
@@ -29,11 +29,11 @@ export class AppComponent {
   }
 
   push() {
-    this._pushObserver!.next(this.textInputFormControl.value);
+    this._pushObserver.next(this.textInputFormControl.value);
     this.textInputFormControl.reset();
   }
 
   pop() {
-    this._popObserver!.next();
+    this._popObserver.next();
   }
 }

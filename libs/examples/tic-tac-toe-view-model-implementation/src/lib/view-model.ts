@@ -7,6 +7,7 @@ import {
   merge,
   scan,
   share,
+  shareReplay,
   startWith,
   Subject,
   switchMap,
@@ -37,7 +38,8 @@ export const ticTacToeViewModel$: DeRxJSViewModel<
       (): UserResetAction => ({
         type: 'user reset click',
       })
-    )
+    ),
+    shareReplay(1)
   );
   const actions$ = merge(userClickActions$, userResetActions$).pipe(
     share({ connector: () => actionsSubject })

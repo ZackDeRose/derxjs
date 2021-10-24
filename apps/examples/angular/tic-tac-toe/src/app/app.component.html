@@ -1,0 +1,16 @@
+<h1>Tic Tac Toe</h1>
+<ng-container *ngIf="vm$ | async as vm">
+  <h2>{{ vm.turn }}</h2>
+  <div class="border">
+    <div class="board">
+      <ng-container *ngFor="let row of rows">
+        <div *ngFor="let column of rows">
+          <button (click)="handleSpaceClick({ row, column })">
+            {{ vm.board[row][column] | uppercase }}
+          </button>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <button class="reset" (click)="handleResetClick()">Reset</button>
+</ng-container>

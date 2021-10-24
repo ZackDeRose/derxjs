@@ -1,0 +1,94 @@
+{
+  "projectType": "application",
+  "root": "apps/examples/angular/tic-tac-toe",
+  "sourceRoot": "apps/examples/angular/tic-tac-toe/src",
+  "prefix": "derxjs",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/examples/angular/tic-tac-toe",
+        "index": "apps/examples/angular/tic-tac-toe/src/index.html",
+        "main": "apps/examples/angular/tic-tac-toe/src/main.ts",
+        "polyfills": "apps/examples/angular/tic-tac-toe/src/polyfills.ts",
+        "tsConfig": "apps/examples/angular/tic-tac-toe/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/examples/angular/tic-tac-toe/src/favicon.ico",
+          "apps/examples/angular/tic-tac-toe/src/assets"
+        ],
+        "styles": ["apps/examples/angular/tic-tac-toe/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/examples/angular/tic-tac-toe/src/environments/environment.ts",
+              "with": "apps/examples/angular/tic-tac-toe/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "examples-angular-tic-tac-toe:build:production"
+        },
+        "development": {
+          "browserTarget": "examples-angular-tic-tac-toe:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "examples-angular-tic-tac-toe:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/examples/angular/tic-tac-toe/src/**/*.ts",
+          "apps/examples/angular/tic-tac-toe/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/examples/angular/tic-tac-toe"],
+      "options": {
+        "jestConfig": "apps/examples/angular/tic-tac-toe/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
