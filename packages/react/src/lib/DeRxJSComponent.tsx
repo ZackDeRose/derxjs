@@ -32,9 +32,7 @@ export const DeRxJSComponent = <InputType, ViewModelType, PropType>({
     const subscription = viewModel$({
       ...inputs,
       ...observables,
-    } as InputType)
-      .pipe(tap((state) => console.log(state)))
-      .subscribe(setState);
+    } as InputType).subscribe(setState);
     return () => subscription.unsubscribe();
   }, []);
   return component({
