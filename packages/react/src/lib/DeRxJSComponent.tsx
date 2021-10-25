@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Observable, Observer } from 'rxjs';
 import { DeRxJSViewModel } from '@derxjs/view-model';
+import { tap } from 'rxjs/operators';
 
 export const DeRxJSComponent = <InputType, ViewModelType, PropType>({
   viewModel$,
@@ -31,7 +32,9 @@ export const DeRxJSComponent = <InputType, ViewModelType, PropType>({
     const subscription = viewModel$({
       ...inputs,
       ...observables,
-    } as InputType).subscribe(setState);
+    } as InputType)
+      .pipe(tap((state) => console.log(state)))
+      .subscribe(setState);
     return () => subscription.unsubscribe();
   }, []);
   return component({

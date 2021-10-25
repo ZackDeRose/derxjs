@@ -1,0 +1,40 @@
+/*
+   * Remove template code below
+   */
+.app {
+  display: grid;
+  font-family: sans-serif;
+  min-width: 300px;
+  max-width: 600px;
+  margin: 50px auto;
+  align-content: center;
+  justify-items: center;
+}
+
+.border {
+  background-color: black;
+  width: 200px;
+  text-align: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: fit-content(40px) fit-content(40px) fit-content(40px);
+  grid-template-rows: fit-content(40px) fit-content(40px) fit-content(40px);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  & > div {
+    background-color: white;
+    padding: 10px;
+  }
+  margin: 0;
+  button {
+    text-align: center;
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.reset {
+  margin-top: 40px;
+}

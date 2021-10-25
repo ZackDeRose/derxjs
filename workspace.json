@@ -8,6 +8,8 @@
     "examples-list-view-model-implementation": "libs/examples/list-view-model-implementation",
     "examples-react-list": "apps/examples/react/list",
     "examples-react-list-e2e": "apps/examples/react/list-e2e",
+    "examples-react-tic-tac-toe": "apps/examples/react/tic-tac-toe",
+    "examples-react-tic-tac-toe-e2e": "apps/examples/react/tic-tac-toe-e2e",
     "examples-tic-tac-toe-view-model-implementation": "libs/examples/tic-tac-toe-view-model-implementation",
     "examples-vanilla-list": "apps/examples/vanilla/list",
     "examples-vanilla-list-e2e": "apps/examples/vanilla/list-e2e",

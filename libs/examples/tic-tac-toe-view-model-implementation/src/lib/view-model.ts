@@ -1,17 +1,17 @@
 import { DeRxJSViewModel } from '@derxjs/view-model';
+import { merge, Subject } from 'rxjs';
 import {
   delay,
   distinctUntilChanged,
   filter,
   map,
-  merge,
   scan,
   share,
   shareReplay,
   startWith,
-  Subject,
   switchMap,
-} from 'rxjs';
+  tap,
+} from 'rxjs/operators';
 import {
   Board,
   SpaceContent,
@@ -31,7 +31,8 @@ export const ticTacToeViewModel$: DeRxJSViewModel<
         type: 'user space click',
         space: space,
       })
-    )
+    ),
+    shareReplay(1)
   );
   const userResetActions$ = userResetClickEvents$.pipe(
     map(
@@ -41,14 +42,13 @@ export const ticTacToeViewModel$: DeRxJSViewModel<
     ),
     shareReplay(1)
   );
-  const actions$ = merge(userClickActions$, userResetActions$).pipe(
-    share({ connector: () => actionsSubject })
-  );
+  const actions$ = merge(userClickActions$, userResetActions$, actionsSubject);
 
   const state$ = actions$.pipe(
     scan(reducer, createInitialViewModel()),
     startWith<TicTacToeViewModel>(createInitialViewModel()),
-    distinctUntilChanged()
+    distinctUntilChanged(),
+    shareReplay(1)
   );
 
   const aiActions$ = userResetActions$.pipe(
@@ -60,13 +60,12 @@ export const ticTacToeViewModel$: DeRxJSViewModel<
         map((state) => ({
           type: 'ai action' as const,
           space: ai({ board: state.board, aiLetter: 'o' }),
-        })),
-        share({ connector: () => actionsSubject })
+        }))
       )
     )
   );
 
-  aiActions$.subscribe();
+  aiActions$.subscribe((action) => actionsSubject.next(action));
 
   return state$;
 };

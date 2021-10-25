@@ -1,0 +1,80 @@
+{
+  "root": "apps/examples/react/tic-tac-toe",
+  "sourceRoot": "apps/examples/react/tic-tac-toe/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/examples/react/tic-tac-toe",
+        "index": "apps/examples/react/tic-tac-toe/src/index.html",
+        "main": "apps/examples/react/tic-tac-toe/src/main.tsx",
+        "polyfills": "apps/examples/react/tic-tac-toe/src/polyfills.ts",
+        "tsConfig": "apps/examples/react/tic-tac-toe/tsconfig.app.json",
+        "assets": [
+          "apps/examples/react/tic-tac-toe/src/favicon.ico",
+          "apps/examples/react/tic-tac-toe/src/assets"
+        ],
+        "styles": ["apps/examples/react/tic-tac-toe/src/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/examples/react/tic-tac-toe/src/environments/environment.ts",
+              "with": "apps/examples/react/tic-tac-toe/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "extractCss": true,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false,
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "examples-react-tic-tac-toe:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "examples-react-tic-tac-toe:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/examples/react/tic-tac-toe/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/examples/react/tic-tac-toe"],
+      "options": {
+        "jestConfig": "apps/examples/react/tic-tac-toe/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
