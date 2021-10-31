@@ -6,11 +6,9 @@ import {
   filter,
   map,
   scan,
-  share,
   shareReplay,
   startWith,
   switchMap,
-  tap,
 } from 'rxjs/operators';
 import {
   Board,

@@ -1,7 +1,6 @@
+import { DeRxJSViewModel } from '@derxjs/view-model';
 import { useEffect, useRef, useState } from 'react';
 import { Observable, Observer } from 'rxjs';
-import { DeRxJSViewModel } from '@derxjs/view-model';
-import { tap } from 'rxjs/operators';
 
 export const DeRxJSComponent = <InputType, ViewModelType, PropType>({
   viewModel$,

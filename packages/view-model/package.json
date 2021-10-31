@@ -22,6 +22,6 @@
   "homepage": "https://github.com/ZackDeRose/derxjs#readme",
   "types": "index.ts",
   "dependencies": {
-    "rxjs": "^7.3.1"
+    "rxjs": "^7.4.0"
   }
 }
