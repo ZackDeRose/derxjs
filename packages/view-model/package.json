@@ -1,6 +1,6 @@
 {
   "name": "@derxjs/view-model",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "Official library for the DeRxJS Pattern",
   "scripts": {
     "test": "nx test view-model"
