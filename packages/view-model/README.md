@@ -53,7 +53,52 @@ function reducer(state: ListViewModel, action: Action): ListViewModel {
 }
 ```
 
-See it in action on [StackBlitz](https://stackblitz.com/edit/typescript-ttcedi?embed=1&file=index.ts)
+See it in action:
+
+<table>
+  <tr>
+    <th>Example</th>
+    <th>Vanilla</th>
+    <th>React</th>
+    <th>Angular</th>
+  </tr>
+  <tr>
+    <td>Simple List Component</td>
+    <td>
+      <a href="https://stackblitz.com/edit/typescript-ttcedi?file=index.ts">
+        <img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg">
+      </a>
+    </td>
+    <td>
+      <a href="https://stackblitz.com/edit/react-ts-j89fzs?file=index.ts">
+        <img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg">
+      </a>
+    </td>
+    <td>
+      <a href="https://stackblitz.com/edit/angular-ivy-d8prtn?file=src/app/app.component.ts">
+        <img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg">
+      </a>
+    </td>  
+  </tr>
+  <tr>
+    <td>Intermediate Tic Tac Toe Component</td>
+    <td>
+      <a href="https://stackblitz.com/edit/typescript-bavrh2?file=index.ts">
+        <img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg">
+      </a>
+    </td>
+    <td>
+      <a href="https://stackblitz.com/edit/react-ts-6wxgfx?file=index.tsx">
+        <img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg">
+      </a>
+    </td>
+    <td>
+      <a href="https://stackblitz.com/edit/angular-ivy-qe6zzv?file=src/app/app.component.ts">
+        <img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg">
+      </a>
+    </td>  
+  </tr>
+</table>
 
 ## Why @derxjs
 
@@ -110,10 +155,10 @@ This tool will generate `.spec.ts` files that you can paste directly into your r
 ## @derxjs Roadmap
 
 - @derxjs/view-model package ✅
-- Article on TDD and implementing DeRxJS View Models (10/8/2021)
-- Article on using DeRxJS View Models in different Frameworks (10/15/2021)
-- @derxjs/reducer package (TBD; [beta available now](https://github.com/ZackDeRose/derxjs-reducer))
+- [Article on TDD and implementing DeRxJS View Models](https://dev.to/zackderose/the-derxjsviewmodel-pattern-the-e-mc-2-of-state-management-part-1-3dka) ✅
+- [Article on using DeRxJS View Models in different Frameworks](https://dev.to/zackderose/the-derxjsviewmodel-pattern-the-emc2-of-state-management-part-2-2i73) ✅
+- @derxjs/reducer package (TBD; [beta available now](https://www.npmjs.com/package/@derxjs/reducer)) 🚧
+- @derxjs/react package (TBD; [beta available now](https://www.npmjs.com/package/@derxjs/react)) 🚧
 - Timeline Test Code Generation Tool (TBD)
 - @derxjs/selector package (TBD)
-- @derxjs/react package (TBD)
 - Ai-Driven DeRxJS Code Generation (TBD)

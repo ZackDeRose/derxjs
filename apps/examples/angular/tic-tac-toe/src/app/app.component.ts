@@ -34,7 +34,6 @@ export class AppComponent {
   }
 
   handleResetClick() {
-    console.log('reset clicked!');
     this.userResetClickObserver.next();
   }
 }

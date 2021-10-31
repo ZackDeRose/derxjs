@@ -76,10 +76,10 @@ This tool will generate `.spec.ts` files that you can paste directly into your r
 ## @derxjs Roadmap
 
 - @derxjs/view-model package ✅
-- Article on TDD and implementing DeRxJS View Models (10/8/2021)
-- Article on using DeRxJS View Models in different Frameworks (10/15/2021)
-- @derxjs/reducer package (TBD; beta available now [you're looking at it!])
+- [Article on TDD and implementing DeRxJS View Models](https://dev.to/zackderose/the-derxjsviewmodel-pattern-the-e-mc-2-of-state-management-part-1-3dka) ✅
+- [Article on using DeRxJS View Models in different Frameworks](https://dev.to/zackderose/the-derxjsviewmodel-pattern-the-emc2-of-state-management-part-2-2i73) ✅
+- @derxjs/reducer package (TBD; [beta available now](https://www.npmjs.com/package/@derxjs/reducer)) 🚧
+- @derxjs/react package (TBD; [beta available now](https://www.npmjs.com/package/@derxjs/react)) 🚧
 - Timeline Test Code Generation Tool (TBD)
 - @derxjs/selector package (TBD)
-- @derxjs/react package (TBD)
 - Ai-Driven DeRxJS Code Generation (TBD)

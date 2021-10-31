@@ -13,7 +13,6 @@ export default async function (tree: Tree, schema: any) {
   await addToPublishScriptList(tree, schema.name);
   await updatePackageJson(tree, schema.name);
   await formatFiles(tree);
-  console.log(tree.read(`packages/${schema.name}/package.json`).toString());
   return () => {
     installPackagesTask(tree);
   };

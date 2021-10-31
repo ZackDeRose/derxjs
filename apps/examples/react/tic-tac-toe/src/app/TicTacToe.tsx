@@ -66,6 +66,7 @@ function TicTacToeView({
                 contents={state.board[row][column]}
                 spaceCoordinates={{ row, column }}
                 clickHandler={triggers.spaceClick}
+                key={`${row}:${column}`}
               />
             ))}
         </div>
