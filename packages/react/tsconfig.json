@@ -3,6 +3,7 @@
   "files": [],
   "include": [],
   "compilerOptions": {
+    "module": "commonjs",
     "jsx": "react-jsx"
   },
   "references": [
