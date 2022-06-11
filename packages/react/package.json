@@ -1,6 +1,6 @@
 {
   "name": "@derxjs/react",
-  "version": "1.2.9",
+  "version": "1.3.0",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
