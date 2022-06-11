@@ -1,10 +1,10 @@
 {
-  "root": "packages/react",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/react/src",
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/workspace:tsc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/react",
@@ -25,7 +25,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/packages/react"],
       "options": {
-        "jestConfig": "packages/react/jest.config.js",
+        "jestConfig": "packages/react/jest.config.ts",
         "passWithNoTests": true
       }
     },

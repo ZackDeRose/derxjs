@@ -1,5 +1,6 @@
-module.exports = {
-  displayName: 'examples-vanilla-list',
+/* eslint-disable */
+export default {
+  displayName: 'examples-vanilla-tic-tac-toe',
   preset: '../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -11,5 +12,5 @@ module.exports = {
     '^.+\\.[tj]s$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../../../coverage/apps/examples/vanilla/list',
+  coverageDirectory: '../../../../coverage/apps/examples/vanilla/tic-tac-toe',
 };

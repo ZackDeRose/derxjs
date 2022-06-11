@@ -1,5 +1,6 @@
-module.exports = {
-  displayName: 'view-model',
+/* eslint-disable */
+export default {
+  displayName: '..-packages-react',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -10,5 +11,5 @@ module.exports = {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/packages/view-model',
+  coverageDirectory: '../../coverage/libs/../packages/react',
 };

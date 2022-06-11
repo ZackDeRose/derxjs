@@ -1,6 +1,6 @@
 {
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "root": "apps/examples/angular/tic-tac-toe",
   "sourceRoot": "apps/examples/angular/tic-tac-toe/src",
   "prefix": "derxjs",
   "targets": {
@@ -85,7 +85,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/apps/examples/angular/tic-tac-toe"],
       "options": {
-        "jestConfig": "apps/examples/angular/tic-tac-toe/jest.config.js",
+        "jestConfig": "apps/examples/angular/tic-tac-toe/jest.config.ts",
         "passWithNoTests": true
       }
     }

@@ -1,11 +1,11 @@
 {
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "root": "apps/examples/vanilla/tic-tac-toe",
   "sourceRoot": "apps/examples/vanilla/tic-tac-toe/src",
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nrwl/web:build",
+      "executor": "@nrwl/web:webpack",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/examples/vanilla/tic-tac-toe",
@@ -53,8 +53,12 @@
       "configurations": {
         "production": {
           "buildTarget": "examples-vanilla-tic-tac-toe:build:production"
+        },
+        "development": {
+          "buildTarget": "examples-vanilla-tic-tac-toe:build:development"
         }
-      }
+      },
+      "defaultConfiguration": "development"
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
@@ -67,7 +71,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/apps/examples/vanilla/tic-tac-toe"],
       "options": {
-        "jestConfig": "apps/examples/vanilla/tic-tac-toe/jest.config.js",
+        "jestConfig": "apps/examples/vanilla/tic-tac-toe/jest.config.ts",
         "passWithNoTests": true
       }
     }

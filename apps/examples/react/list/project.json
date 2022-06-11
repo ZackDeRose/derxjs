@@ -1,10 +1,10 @@
 {
-  "root": "apps/examples/react/list",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/examples/react/list/src",
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/web:build",
+      "executor": "@nrwl/web:webpack",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/examples/react/list",
@@ -55,8 +55,12 @@
         "production": {
           "buildTarget": "examples-react-list:build:production",
           "hmr": false
+        },
+        "development": {
+          "buildTarget": "examples-react-list:build:development"
         }
-      }
+      },
+      "defaultConfiguration": "development"
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
@@ -69,7 +73,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/apps/examples/react/list"],
       "options": {
-        "jestConfig": "apps/examples/react/list/jest.config.js",
+        "jestConfig": "apps/examples/react/list/jest.config.ts",
         "passWithNoTests": true
       }
     }

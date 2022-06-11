@@ -1,11 +1,11 @@
 {
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "root": "apps/examples/vanilla/list",
   "sourceRoot": "apps/examples/vanilla/list/src",
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nrwl/web:build",
+      "executor": "@nrwl/web:webpack",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/examples/vanilla/list",
@@ -53,8 +53,12 @@
       "configurations": {
         "production": {
           "buildTarget": "examples-vanilla-list:build:production"
+        },
+        "development": {
+          "buildTarget": "examples-vanilla-list:build:development"
         }
-      }
+      },
+      "defaultConfiguration": "development"
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
@@ -67,7 +71,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/apps/examples/vanilla/list"],
       "options": {
-        "jestConfig": "apps/examples/vanilla/list/jest.config.js",
+        "jestConfig": "apps/examples/vanilla/list/jest.config.ts",
         "passWithNoTests": true
       }
     }

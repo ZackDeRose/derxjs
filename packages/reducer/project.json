@@ -1,10 +1,10 @@
 {
-  "root": "packages/reducer",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/reducer/src",
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/workspace:tsc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/reducer",
@@ -24,7 +24,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/packages/reducer"],
       "options": {
-        "jestConfig": "packages/reducer/jest.config.js",
+        "jestConfig": "packages/reducer/jest.config.ts",
         "passWithNoTests": true
       }
     },

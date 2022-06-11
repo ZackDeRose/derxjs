@@ -1,5 +1,5 @@
 {
-  "extends": "@nrwl/workspace/presets/npm.json",
+  "extends": "nx/presets/npm.json",
   "npmScope": "derxjs",
   "affected": {
     "defaultBase": "master"
@@ -9,7 +9,8 @@
       "runner": "@nrwl/nx-cloud",
       "options": {
         "cacheableOperations": ["build", "lint", "test", "e2e"],
-        "accessToken": "MTc5YzBiOGQtZWExOS00YzJjLTk5YjAtYmYzYmIxNGZlZGU4fHJlYWQtd3JpdGU="
+        "accessToken": "MTc5YzBiOGQtZWExOS00YzJjLTk5YjAtYmYzYmIxNGZlZGU4fHJlYWQtd3JpdGU=",
+        "parallel": 1
       }
     }
   },
@@ -27,7 +28,6 @@
       "e2eTestRunner": "cypress"
     },
     "@nrwl/angular:library": {
-      "style": "scss",
       "linter": "eslint",
       "unitTestRunner": "jest"
     },
@@ -60,5 +60,6 @@
       "unitTestRunner": "jest"
     }
   },
-  "defaultProject": "examples-vanilla-list"
+  "defaultProject": "examples-vanilla-list",
+  "$schema": "./node_modules/nx/schemas/nx-schema.json"
 }

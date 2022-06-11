@@ -1,4 +1,5 @@
-module.exports = {
+/* eslint-disable */
+export default {
   displayName: 'examples-list-view-model-implementation',
   preset: '../../../jest.preset.js',
   globals: {

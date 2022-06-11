@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import {
   customListImpl$ as listViewModel$,
   // reducerListImpl$ as listViewModel$,
@@ -13,7 +13,7 @@ import { Observable, Observer } from 'rxjs';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  textInputFormControl = new FormControl();
+  textInputFormControl = new UntypedFormControl();
   private _pushObserver!: Observer<string>;
   private _popObserver!: Observer<void>;
   viewModel$: Observable<ListViewModel>;

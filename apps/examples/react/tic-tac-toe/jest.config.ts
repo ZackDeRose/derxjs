@@ -1,4 +1,5 @@
-module.exports = {
+/* eslint-disable */
+export default {
   displayName: 'examples-react-tic-tac-toe',
   preset: '../../../../jest.preset.js',
   transform: {

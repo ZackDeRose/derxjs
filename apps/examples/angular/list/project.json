@@ -1,6 +1,6 @@
 {
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "root": "apps/examples/angular/list",
   "sourceRoot": "apps/examples/angular/list/src",
   "prefix": "derxjs",
   "targets": {
@@ -85,7 +85,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/apps/examples/angular/list"],
       "options": {
-        "jestConfig": "apps/examples/angular/list/jest.config.js",
+        "jestConfig": "apps/examples/angular/list/jest.config.ts",
         "passWithNoTests": true
       }
     }

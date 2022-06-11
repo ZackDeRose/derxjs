@@ -1,10 +1,10 @@
 {
-  "root": "packages/view-model",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/view-model/src",
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/workspace:tsc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/view-model",
@@ -24,7 +24,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/packages/view-model"],
       "options": {
-        "jestConfig": "packages/view-model/jest.config.js",
+        "jestConfig": "packages/view-model/jest.config.ts",
         "passWithNoTests": true
       }
     },

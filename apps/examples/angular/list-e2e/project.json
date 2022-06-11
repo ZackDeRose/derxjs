@@ -1,5 +1,5 @@
 {
-  "root": "apps/examples/angular/list-e2e",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/examples/angular/list-e2e/src",
   "projectType": "application",
   "targets": {
@@ -17,12 +17,18 @@
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["apps/examples/angular/list-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": [
+          "apps/examples/angular/list-e2e/**/*.{js,ts}"
+        ]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["examples-angular-list"]
+  "implicitDependencies": [
+    "examples-angular-list"
+  ]
 }

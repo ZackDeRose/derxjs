@@ -18,5 +18,6 @@
     "react": "packages/react",
     "reducer": "packages/reducer",
     "view-model": "packages/view-model"
-  }
+  },
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }
