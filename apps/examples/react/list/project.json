@@ -1,10 +1,11 @@
 {
+  "name": "examples-react-list",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/examples/react/list/src",
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/web:webpack",
+      "executor": "@nx/webpack:webpack",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/examples/react/list",
@@ -18,7 +19,7 @@
         ],
         "styles": ["apps/examples/react/list/src/styles.scss"],
         "scripts": [],
-        "webpackConfig": "@nrwl/react/plugins/webpack"
+        "webpackConfig": "@nx/react/plugins/webpack"
       },
       "configurations": {
         "production": {
@@ -46,7 +47,7 @@
       }
     },
     "serve": {
-      "executor": "@nrwl/web:dev-server",
+      "executor": "@nx/webpack:dev-server",
       "options": {
         "buildTarget": "examples-react-list:build",
         "hmr": true
@@ -63,15 +64,15 @@
       "defaultConfiguration": "development"
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/examples/react/list/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/examples/react/list"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/examples/react/list"],
       "options": {
         "jestConfig": "apps/examples/react/list/jest.config.ts",
         "passWithNoTests": true

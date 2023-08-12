@@ -23,7 +23,8 @@
       ],
       "@derxjs/react": ["packages/react/src/index.ts"],
       "@derxjs/reducer": ["packages/reducer/src/index.ts"],
-      "@derxjs/view-model": ["packages/view-model/src/index.ts"]
+      "@derxjs/view-model": ["packages/view-model/src/index.ts"],
+      "@derxjs/workspace-plugin": ["tools/workspace-plugin/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

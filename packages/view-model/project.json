@@ -1,35 +1,37 @@
 {
+  "name": "view-model",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/view-model/src",
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/view-model",
         "main": "packages/view-model/src/index.ts",
         "tsConfig": "packages/view-model/tsconfig.lib.json",
-        "assets": ["packages/view-model/*.md"]
+        "assets": ["packages/view-model/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["packages/view-model/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/view-model"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/packages/view-model"],
       "options": {
         "jestConfig": "packages/view-model/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "publish": {
-      "executor": "@nrwl/workspace:run-commands",
+      "executor": "nx:run-commands",
       "options": {
         "commands": [
           "npx ts-node tools/scripts/bump-version.ts view-model {args.version}",

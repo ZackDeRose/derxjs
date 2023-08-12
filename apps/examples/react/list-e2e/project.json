@@ -1,10 +1,11 @@
 {
+  "name": "examples-react-list-e2e",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/examples/react/list-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
-      "executor": "@nrwl/cypress:cypress",
+      "executor": "@nx/cypress:cypress",
       "options": {
         "cypressConfig": "apps/examples/react/list-e2e/cypress.json",
         "devServerTarget": "examples-react-list:serve"
@@ -16,19 +17,13 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "apps/examples/react/list-e2e/**/*.{js,ts}"
-        ]
+        "lintFilePatterns": ["apps/examples/react/list-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": [
-    "examples-react-list"
-  ]
+  "implicitDependencies": ["examples-react-list"]
 }

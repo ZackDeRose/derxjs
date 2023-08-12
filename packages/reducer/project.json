@@ -1,35 +1,37 @@
 {
+  "name": "reducer",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/reducer/src",
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/reducer",
         "main": "packages/reducer/src/index.ts",
         "tsConfig": "packages/reducer/tsconfig.lib.json",
-        "assets": ["packages/reducer/*.md"]
+        "assets": ["packages/reducer/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["packages/reducer/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/reducer"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/packages/reducer"],
       "options": {
         "jestConfig": "packages/reducer/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "publish": {
-      "executor": "@nrwl/workspace:run-commands",
+      "executor": "nx:run-commands",
       "options": {
         "commands": [
           "npx ts-node tools/scripts/bump-version.ts reducer {args.version}",

@@ -1,5 +1,5 @@
-import { Tree, formatFiles, installPackagesTask, Target } from '@nrwl/devkit';
-import { libraryGenerator } from '@nrwl/workspace/generators';
+import { Tree, formatFiles, installPackagesTask, Target } from '@nx/devkit';
+import { libraryGenerator } from '@nx/workspace/generators';
 
 export default async function (tree: Tree, schema: any) {
   await libraryGenerator(tree, {
@@ -86,7 +86,7 @@ async function adjustProjectJson(tree: Tree, name: string) {
 
 function createPublishTarget(name: string) {
   return {
-    executor: `@nrwl/workspace:run-commands`,
+    executor: `@nx/workspace:run-commands`,
     options: {
       commands: [
         `rm -rf packages/${name}/dist`,

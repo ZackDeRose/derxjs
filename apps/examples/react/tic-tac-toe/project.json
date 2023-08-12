@@ -1,10 +1,11 @@
 {
+  "name": "examples-react-tic-tac-toe",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/examples/react/tic-tac-toe/src",
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/web:webpack",
+      "executor": "@nx/webpack:webpack",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/examples/react/tic-tac-toe",
@@ -18,7 +19,7 @@
         ],
         "styles": ["apps/examples/react/tic-tac-toe/src/styles.scss"],
         "scripts": [],
-        "webpackConfig": "@nrwl/react/plugins/webpack"
+        "webpackConfig": "@nx/react/plugins/webpack"
       },
       "configurations": {
         "production": {
@@ -46,7 +47,7 @@
       }
     },
     "serve": {
-      "executor": "@nrwl/web:dev-server",
+      "executor": "@nx/webpack:dev-server",
       "options": {
         "buildTarget": "examples-react-tic-tac-toe:build",
         "hmr": true
@@ -63,7 +64,7 @@
       "defaultConfiguration": "development"
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -72,8 +73,8 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/examples/react/tic-tac-toe"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/examples/react/tic-tac-toe"],
       "options": {
         "jestConfig": "apps/examples/react/tic-tac-toe/jest.config.ts",
         "passWithNoTests": true

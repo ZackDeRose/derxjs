@@ -1,11 +1,12 @@
 {
+  "name": "examples-vanilla-list",
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "sourceRoot": "apps/examples/vanilla/list/src",
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nrwl/web:webpack",
+      "executor": "@nx/webpack:webpack",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/examples/vanilla/list",
@@ -46,7 +47,7 @@
       }
     },
     "serve": {
-      "executor": "@nrwl/web:dev-server",
+      "executor": "@nx/webpack:dev-server",
       "options": {
         "buildTarget": "examples-vanilla-list:build"
       },
@@ -61,15 +62,15 @@
       "defaultConfiguration": "development"
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/examples/vanilla/list/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/examples/vanilla/list"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/examples/vanilla/list"],
       "options": {
         "jestConfig": "apps/examples/vanilla/list/jest.config.ts",
         "passWithNoTests": true

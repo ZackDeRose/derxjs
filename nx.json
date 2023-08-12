@@ -1,12 +1,7 @@
 {
-  "extends": "nx/presets/npm.json",
-  "npmScope": "derxjs",
-  "affected": {
-    "defaultBase": "master"
-  },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/nx-cloud",
+      "runner": "nx-cloud",
       "options": {
         "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "MTc5YzBiOGQtZWExOS00YzJjLTk5YjAtYmYzYmIxNGZlZGU4fHJlYWQtd3JpdGU=",
@@ -14,27 +9,43 @@
       }
     }
   },
+  "extends": "nx/presets/npm.json",
+  "npmScope": "derxjs",
+  "affected": {
+    "defaultBase": "master"
+  },
   "workspaceLayout": {
     "libsDir": "libs"
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nx/angular"
   },
   "generators": {
-    "@nrwl/angular:application": {
+    "@nx/angular:application": {
       "style": "scss",
       "linter": "eslint",
       "unitTestRunner": "jest",
       "e2eTestRunner": "cypress"
     },
-    "@nrwl/angular:library": {
+    "@nx/angular:library": {
       "linter": "eslint",
       "unitTestRunner": "jest"
     },
-    "@nrwl/angular:component": {
+    "@nx/angular:component": {
       "style": "scss"
     },
-    "@nrwl/react": {
+    "@nx/web:application": {
+      "style": "css",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nx/web:library": {
+      "style": "css",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nx/react": {
       "application": {
         "style": "scss",
         "linter": "eslint",
@@ -47,19 +58,19 @@
         "style": "scss",
         "linter": "eslint"
       }
-    },
-    "@nrwl/web:application": {
-      "style": "css",
-      "linter": "eslint",
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/web:library": {
-      "style": "css",
-      "linter": "eslint",
-      "unitTestRunner": "jest"
     }
   },
   "defaultProject": "examples-vanilla-list",
-  "$schema": "./node_modules/nx/schemas/nx-schema.json"
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "targetDefaults": {
+    "lint": {
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
+    },
+    "e2e": {
+      "inputs": ["default", "^default"]
+    },
+    "test": {
+      "inputs": ["default", "^default", "{workspaceRoot}/jest.preset.js"]
+    }
+  }
 }

@@ -1,10 +1,11 @@
 {
+  "name": "examples-tic-tac-toe-view-model-implementation",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/examples/tic-tac-toe-view-model-implementation/src",
   "projectType": "library",
   "targets": {
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -13,9 +14,9 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": [
-        "coverage/libs/examples/tic-tac-toe-view-model-implementation"
+        "{workspaceRoot}/coverage/libs/examples/tic-tac-toe-view-model-implementation"
       ],
       "options": {
         "jestConfig": "libs/examples/tic-tac-toe-view-model-implementation/jest.config.ts",
